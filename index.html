@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surprise Birthday!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="lights hidden" id="lights" aria-hidden="true">
+    <div class="light-string" aria-hidden="true">
+      <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+      <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+      <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+      <div class="bulb"></div><div class="bulb"></div><div class="bulb"></div><div class="bulb"></div>
+    </div>
+  </div>
+  <div class="confetti hidden" id="confetti" aria-hidden="true"></div>
+  <div class="balloon-area hidden" id="balloonArea" aria-hidden="true"></div>
+  <div class="container">
+    <h1>Surprise is loading…</h1>
+    <p class="lede">Press each button to reveal the next celebration!</p>
+    <div id="step1"><button class="btn" id="btnLights">Lights On</button></div>
+    <div id="step2" class="hidden"><button class="btn" id="btnMusic">Play Music</button></div>
+    <div id="step3" class="hidden"><button class="btn" id="btnDecor">Let’s Decorate!</button></div>
+    <div id="step4" class="hidden"><button class="btn" id="btnBalloons">Fly with Balloons</button></div>
+    <div id="step5" class="hidden"><button class="btn" id="btnCake">The Best Cake</button></div>
+    <div id="step6" class="hidden"><button class="btn" id="btnCandles">Light Candles</button></div>
+    <div id="step7" class="hidden"><button class="btn" id="btnHBD">Happy Birthday!</button></div>
+    <div id="step8" class="hidden"><button class="btn" id="btnMessage">Message for You</button></div>
+
+    <!-- Day/Night Mode Toggle -->
+    <div style="margin: 20px 0;">
+      <button id="toggleTheme" class="btn">Toggle Day/Night Mode</button>
+    </div>
+
+    <!-- Photo Gallery/Slideshow with caption -->
+    <div id="photoGallery" class="hidden">
+      <h2>Memories</h2>
+      <div class="slider">
+        <button id="prevBtn" aria-label="Previous photo">&#10094;</button>
+        <div>
+          <img id="galleryImage" src="image.png" alt="Birthday Photo" />
+          <p id="memoryCaption" class="memory-caption"></p>
+        </div>
+        <button id="nextBtn" aria-label="Next photo">&#10095;</button>
+      </div>
+    </div>
+<div id="unlockSection" class="hidden" style="margin-top: 20px;">
+  <p>Solve this puzzle to unlock your gift:</p>
+  <p><strong>What is 1 + 1 ?</strong></p>
+  <input type="text" id="puzzleAnswer" placeholder="Your answer" />
+  <button id="unlockBtn" class="btn">Unlock Gift</button>
+  <p id="unlockFeedback" style="color: var(--pink); margin-top: 8px; display:none;"></p>
+</div>
+
+    <!-- Gift Reveal Section -->
+    <div id="giftSection" class="hidden">
+  <button id="giftBox" class="btn">🎁 Open Your Gift!</button>
+  <div id="giftMessage" class="hidden">
+    <img src="image.png" alt="Gift Image" style="max-width: 50%; border-radius: 8px; margin-top: 10px;">
+    <div class="gift-letter" style="margin-top:20px; font-size:18px; color:var(--accent); white-space: pre-line; background:rgba(255,255,255,0.06); padding:16px; border-radius:12px;">
+Hey there!
+
+Happy Birthday! 🎉 I hope today brings you plenty of smiles, good food, and fun memories you’ll never forget. Honestly, I’m really glad to have you around — life is definitely brighter and way more interesting with you in it!
+
+From random chats about nothing, last-minute plans, and crazy adventures, to those lazy days just hanging out doing absolutely nothing — thanks for all the laughs and all the moments. You’re the friend who always makes things 10x better, whether it’s a group hangout or just a random text that makes the day.
+
+I wish you the best for everything ahead: may this year bring you success, happiness, and all the weird, awesome stuff you secretly wish for! No matter where life takes us, hope we keep making memories together. Never stop being you — you’re one of a kind, and that’s what makes you awesome.
+
+Eat lots of cake, enjoy every moment, and don’t forget to take a zillion photos! Here’s to many more years of fun, friendship, and unforgettable moments.
+
+Happy birthday again! You deserve all the best.
+
+Your friend,<br>
+[Your Name]
+    </div>
+  </div>
+</div>
+
+
+    <div id="decor" class="hidden" aria-live="polite">
+      <div class="banners" aria-hidden="true">
+        <span class="banner">Party Time</span>
+        <span class="banner">Streamers</span>
+        <span class="banner">Let’s Celebrate</span>
+      </div>
+    </div>
+    <div class="stage hidden" id="stage">
+      <div class="cake" aria-label="Birthday cake with candles">
+        <div class="plate"></div>
+        <div class="layer top">
+          <div class="icing">
+            <div class="drip d1"></div>
+            <div class="drip d2"></div>
+            <div class="drip d3"></div>
+            <div class="drip d4"></div>
+          </div>
+        </div>
+        <div class="layer"></div>
+        <div class="candles">
+          <div class="candle">
+            <div class="flame" aria-hidden="true"></div>
+            <div class="wick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame" aria-hidden="true"></div>
+            <div class="wick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame" aria-hidden="true"></div>
+            <div class="wick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame" aria-hidden="true"></div>
+            <div class="wick"></div>
+          </div>
+          <div class="candle">
+            <div class="flame" aria-hidden="true"></div>
+            <div class="wick"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="letters hidden" id="letters" aria-label="Letter balloons"></div>
+    <div id="finalMessage" class="hidden" aria-live="polite">
+      <h1>Happy Birthday to my dearest friend,</h1>
+      <p class="lede">With you, the good times never end.</p>
+      <p class="lede">Wishing you joy, success, and cheer,</p>
+      <p class="lede">May happiness follow you all year!</p>
+    </div>
+    <div class="spacer"></div>
+  </div>
+  <audio id="music" preload="auto" crossorigin="anonymous">
+    <source src="happy-birthday.mp3" type="audio/mpeg" />
+  </audio>
+  <script src="script.js"></script>
+  <div id="fireworks" class="hidden"></div>
+
+</body>
+</html>
