@@ -16,4 +16,4 @@ A creative website built using HTML, CSS, and JavaScript that simulates a virtua
 - **JavaScript (ES6)** – DOM manipulation and interactivity 
 
 ▶ Live Demo
-[Play Here](https://your-username.github.io/tic-tac-toe-game/)
+[Play Here]( https://nishanthini08.github.io/Interactive-Birthday-Celebration-Website/)
